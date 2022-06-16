@@ -2,6 +2,8 @@ import React from 'react'
 import Head from 'next/head'
 
 import { Container } from '../styles/pages/Home'
+import Header from '../components/header'
+import Navbar from '../components/navbar'
 
 const Home: React.FC = () => {
   return (
@@ -10,10 +12,8 @@ const Home: React.FC = () => {
         <title>AutoShop</title>
       </Head>
 
-      <h1>NextJS Structure</h1>
-      <p>
-        Next.js development structure by JVM&apos;s employee Gustavo Ferreira.
-      </p>
+      <Header />
+      <Navbar />
     </Container>
   )
 }
