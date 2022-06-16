@@ -11,7 +11,7 @@ import {
   LinkText
 } from './styles'
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <Container>
       <HeaderContainer>

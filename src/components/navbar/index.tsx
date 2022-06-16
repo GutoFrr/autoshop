@@ -8,7 +8,7 @@ import {
   NavbarLogo
 } from './styles'
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
     <Container>
       <NavbarContainer>
