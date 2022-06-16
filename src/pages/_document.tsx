@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Document, {
   DocumentInitialProps,
   DocumentContext,
@@ -24,12 +24,12 @@ export default class MyDocument extends Document {
       const initialProps = await Document.getInitialProps(ctx)
       return {
         ...initialProps,
-        styles: (
-          <>
+        styles: [
+          <Fragment key="1">
             {initialProps.styles}
             {sheet.getStyleElement()}
-          </>
-        )
+          </Fragment>
+        ]
       }
     } finally {
       sheet.seal()
