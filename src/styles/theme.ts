@@ -20,7 +20,7 @@ const theme = {
     cartCheckOut: '#222',
     sectionTitle: '#373636',
     sectionTitleBackground: '#f6f6f6',
-    sectionName: '#b2b2b2',
+    breadcrumb: '#b2b2b2',
     widgetTitle: '#373636',
     categoriesItem: '#666666',
     recentItem: '#1b1a1a',

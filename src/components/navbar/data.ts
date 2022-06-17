@@ -129,3 +129,12 @@ export const menuItems = [
     ]
   }
 ]
+
+export const menuIcons = [
+  {
+    icon: 'fa:search'
+  },
+  {
+    icon: 'fa:shopping-cart'
+  }
+]

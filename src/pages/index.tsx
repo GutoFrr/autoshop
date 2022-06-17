@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { Container } from '../styles/pages/Home'
 import Header from '../components/header'
 import Navbar from '../components/navbar'
+import Products from '../components/products'
 
 const Home: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
 
       <Header />
       <Navbar />
+      <Products />
     </Container>
   )
 }

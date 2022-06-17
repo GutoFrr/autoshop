@@ -1,37 +1,47 @@
-import React from 'react'
-import { menuItems } from './data'
+import React, { useState } from 'react'
+import { menuIcons, menuItems } from './data'
 import {
   Container,
+  MenuIcons,
   MenuList,
   MenuListItem,
   NavbarContainer,
   NavbarLogo
 } from './styles'
+import navLogo from '../../public/navbar/logo.png'
+import { Icon } from '@iconify/react'
 
 const Navbar: React.FC = () => {
   return (
     <Container>
       <NavbarContainer>
-        <NavbarLogo />
+        <NavbarLogo>
+          <img src={navLogo} alt="Car Shop Logo" />
+        </NavbarLogo>
         <MenuList>
-          {menuItems.map((item, key) => (
-            <MenuListItem key={key}>
-              <h3>{item.menuItem}</h3>
-              <ul>
+          {menuItems.map((item, index) => (
+            <MenuListItem key={index}>
+              <h4>{item.menuItem}</h4>
+              {/* <ul>
                 {item.subItems?.map((subItem, key) => (
-                  <li key={key}>
-                    <h4>{subItem.name}</h4>
+                  <li key={index}>
+                    <h5>{subItem.name}</h5>
                     <ul>
                       {subItem.subSubItems?.map((subSubItem, key) => (
-                        <li key={key}>
-                          <h5>{subSubItem.name}</h5>
+                        <li key={index}>
+                          <h6>{subSubItem.name}</h6>
                         </li>
                       ))}
                     </ul>
                   </li>
                 ))}
-              </ul>
+              </ul> */}
             </MenuListItem>
+          ))}
+          {menuIcons.map((item, index) => (
+            <MenuIcons key={index}>
+              <Icon icon={item.icon} className="icon" />
+            </MenuIcons>
           ))}
         </MenuList>
       </NavbarContainer>
