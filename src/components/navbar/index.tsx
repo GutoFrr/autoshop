@@ -12,6 +12,30 @@ import navLogo from '../../public/navbar/logo.png'
 import { Icon } from '@iconify/react'
 
 const Navbar: React.FC = () => {
+  const [showSubItems, setShowSubItems] = useState(menuItems)
+  const handleShowSubItems = (index: number) => {
+    const tempItems = showSubItems
+    tempItems.forEach((tempItem, index2) => {
+      if (index !== index2) {
+        tempItem.active = false
+      }
+    })
+    tempItems[index].active = !tempItems[index].active
+    setShowSubItems([...tempItems])
+  }
+
+  const [showSubSubItems, setShowSubSubItems] = useState(menuItems)
+  const handleShowSubSubItems = (index: number) => {
+    const tempItems = showSubSubItems
+    tempItems.forEach((tempItem, index2) => {
+      if (index !== index2) {
+        tempItem.active = false
+      }
+    })
+    tempItems[index].active = !tempItems[index].active
+    setShowSubSubItems([...tempItems])
+  }
+
   return (
     <Container>
       <NavbarContainer>
@@ -21,21 +45,37 @@ const Navbar: React.FC = () => {
         <MenuList>
           {menuItems.map((item, index) => (
             <MenuListItem key={index}>
-              <h4>{item.menuItem}</h4>
-              {/* <ul>
-                {item.subItems?.map((subItem, key) => (
-                  <li key={index}>
-                    <h5>{subItem.name}</h5>
-                    <ul>
-                      {subItem.subSubItems?.map((subSubItem, key) => (
-                        <li key={index}>
-                          <h6>{subSubItem.name}</h6>
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                ))}
-              </ul> */}
+              <h4 onMouseEnter={() => handleShowSubItems(index)}>
+                {item.menuItem}
+              </h4>
+              <ul
+                className={`${
+                  showSubItems[index].active ? 'sub-items.active' : 'sub-items'
+                }`}
+              >
+                {showSubItems &&
+                  item.subItems?.map((subItem, index) => (
+                    <li key={index}>
+                      <h5 onMouseEnter={() => handleShowSubSubItems(index)}>
+                        {subItem.name}
+                      </h5>
+                      <ul
+                        className={`${
+                          showSubItems[index].active
+                            ? 'sub-sub-items.active'
+                            : 'sub-sub-items'
+                        }`}
+                      >
+                        {showSubSubItems &&
+                          subItem.subSubItems?.map((subSubItem, index) => (
+                            <li key={index}>
+                              <h6>{subSubItem.name}</h6>
+                            </li>
+                          ))}
+                      </ul>
+                    </li>
+                  ))}
+              </ul>
             </MenuListItem>
           ))}
           {menuIcons.map((item, index) => (

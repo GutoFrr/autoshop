@@ -35,6 +35,28 @@ export const MenuListItem = styled.li`
   font: 700 13px 'Raleway', sans-serif;
   color: ${props => props.theme.colors.menuItem};
   cursor: pointer;
+  position: relative;
+
+  .sub-items {
+    height: 0;
+    opacity: 0;
+    position: absolute;
+  }
+
+  .sub-items.acitve {
+    height: auto;
+    opacity: 1;
+  }
+
+  .sub-sub-items {
+    height: 0;
+    opacity: 0;
+  }
+
+  .sub-sub-items.active {
+    height: auto;
+    opacity: 1;
+  }
 `
 
 export const MenuIcons = styled.div`

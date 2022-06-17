@@ -11,7 +11,8 @@ export const menuItems = [
       {
         name: 'Home3'
       }
-    ]
+    ],
+    active: false
   },
   {
     menuItem: 'Shop',
@@ -39,10 +40,12 @@ export const menuItems = [
         ]
       },
       { name: 'Shop Cart' }
-    ]
+    ],
+    active: false
   },
   {
-    menuItem: 'About'
+    menuItem: 'About',
+    active: false
   },
   {
     menuItem: 'Pages',
@@ -53,7 +56,8 @@ export const menuItems = [
       { name: 'Page Faqs' },
       { name: 'Login' },
       { name: 'Register' }
-    ]
+    ],
+    active: false
   },
   {
     menuItem: 'Features',
@@ -101,7 +105,8 @@ export const menuItems = [
         ]
       },
       { name: 'Widgets' }
-    ]
+    ],
+    active: false
   },
   {
     menuItem: 'Blog',
@@ -115,7 +120,8 @@ export const menuItems = [
       {
         name: 'Blog Singles'
       }
-    ]
+    ],
+    active: false
   },
   {
     menuItem: 'Contact',
@@ -126,7 +132,8 @@ export const menuItems = [
       {
         name: 'Contact 2'
       }
-    ]
+    ],
+    active: false
   }
 ]
 
