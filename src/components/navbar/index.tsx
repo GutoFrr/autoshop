@@ -60,7 +60,12 @@ const Navbar: React.FC = () => {
               >
                 {showSubItems &&
                   item.subItems?.map((subItem, index) => (
-                    <li key={index} className="sub-item">
+                    <li
+                      key={index}
+                      className="sub-item"
+                      onMouseEnter={() => handleShowSubSubItems(index)}
+                      onMouseLeave={() => handleShowSubSubItems(index)}
+                    >
                       <h5>{subItem.name}</h5>
                       <ul
                         className={`${
