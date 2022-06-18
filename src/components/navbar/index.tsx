@@ -44,25 +44,28 @@ const Navbar: React.FC = () => {
         </NavbarLogo>
         <MenuList>
           {menuItems.map((item, index) => (
-            <MenuListItem key={index}>
-              <h4 onMouseEnter={() => handleShowSubItems(index)}>
-                {item.menuItem}
-              </h4>
+            <MenuListItem
+              key={index}
+              onMouseEnter={() => handleShowSubItems(index)}
+              onMouseLeave={() => handleShowSubItems(index)}
+            >
+              <hr
+                className={`${showSubItems[index].active ? 'hr active' : 'hr'}`}
+              />
+              <h4>{item.menuItem}</h4>
               <ul
                 className={`${
-                  showSubItems[index].active ? 'sub-items.active' : 'sub-items'
+                  showSubItems[index].active ? 'sub-items active' : 'sub-items'
                 }`}
               >
                 {showSubItems &&
                   item.subItems?.map((subItem, index) => (
-                    <li key={index}>
-                      <h5 onMouseEnter={() => handleShowSubSubItems(index)}>
-                        {subItem.name}
-                      </h5>
+                    <li key={index} className="sub-item">
+                      <h5>{subItem.name}</h5>
                       <ul
                         className={`${
                           showSubItems[index].active
-                            ? 'sub-sub-items.active'
+                            ? 'sub-sub-items active'
                             : 'sub-sub-items'
                         }`}
                       >

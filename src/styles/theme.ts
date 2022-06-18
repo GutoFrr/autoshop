@@ -8,6 +8,8 @@ const theme = {
     headerLinks: '#404040',
     headerBorder: '#e5e5e5',
     menuItem: '#404040',
+    menuSubItem: '#666',
+    menuSubItemBorder: '#e5e5e5',
     searchBackground: '#fff',
     searchText: '#777',
     cartBackground: '#fff',

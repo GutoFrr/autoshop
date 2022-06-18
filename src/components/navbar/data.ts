@@ -3,13 +3,13 @@ export const menuItems = [
     menuItem: 'Home',
     subItems: [
       {
-        name: 'Home1'
+        name: 'Home 1'
       },
       {
-        name: 'Home2'
+        name: 'Home 2'
       },
       {
-        name: 'Home3'
+        name: 'Home 3'
       }
     ],
     active: false
