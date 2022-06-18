@@ -1,13 +1,17 @@
 import React from 'react'
+import Widgets from '../widgets'
 import PageTitle from './page-title'
 import ShopOptions from './shop-options'
-import { Container } from './styles'
+import { Container, ProductsContent } from './styles'
 
 const Products = () => {
   return (
     <Container>
       <PageTitle />
-      <ShopOptions />
+        <ProductsContent>
+          <ShopOptions />
+          <Widgets />
+        </ProductsContent>
     </Container>
   )
 }
