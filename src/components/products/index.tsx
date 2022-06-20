@@ -1,17 +1,39 @@
 import React from 'react'
-import Widgets from '../widgets'
-import PageTitle from './page-title'
-import ShopOptions from './shop-options'
-import { Container, ProductsContent } from './styles'
+import { productData } from './data'
+import {
+  Container,
+  Product,
+  ProductAction,
+  ProductBio,
+  ProductBrand,
+  ProductButton,
+  ProductHover,
+  ProductImage,
+  ProductPrice,
+  ProductTitle
+} from './styles'
 
 const Products = () => {
   return (
     <Container>
-      <PageTitle />
-        <ProductsContent>
-          <ShopOptions />
-          <Widgets />
-        </ProductsContent>
+      {productData.map((item, index) => (
+        <Product key={index}>
+          <ProductImage>
+            <img src={item.image} alt="Product Image" />
+            <ProductHover>
+              <ProductAction>
+                <ProductButton>add to cart</ProductButton>
+                <ProductButton>item details</ProductButton>
+              </ProductAction>
+            </ProductHover>
+          </ProductImage>
+          <ProductBio>
+            <ProductBrand>{item.brand}</ProductBrand>
+            <ProductTitle>{item.title}</ProductTitle>
+            <ProductPrice>${item.price}</ProductPrice>
+          </ProductBio>
+        </Product>
+      ))}
     </Container>
   )
 }

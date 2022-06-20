@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 100vw;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: ${props => props.theme.colors.background};
   box-shadow: 0 2px 3px rgb(39 41 48 / 3%);
   position: sticky;
-  top: 50px;
+  top: 0px;
+  z-index: 10;
 
   ul {
     list-style: none;

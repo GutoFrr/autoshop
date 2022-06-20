@@ -63,8 +63,8 @@ const Navbar: React.FC = () => {
                     <li
                       key={index}
                       className="sub-item"
-                      onMouseEnter={() => handleShowSubSubItems(index)}
-                      onMouseLeave={() => handleShowSubSubItems(index)}
+                      // onMouseEnter={() => handleShowSubSubItems(index)}
+                      // onMouseLeave={() => handleShowSubSubItems(index)}
                     >
                       <h5>{subItem.name}</h5>
                       <ul
