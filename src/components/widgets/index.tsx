@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react'
 import React from 'react'
 import { widgetData } from './data'
 import {
@@ -22,6 +23,7 @@ const Widgets = () => {
           <WidgetList>
             {item.categories?.map((item, categoriesIndex) => (
               <Categories key={categoriesIndex}>
+                <Icon icon="fa:angle-double-right" className="brand-icon" />
                 {item.brand}
                 <span> {item.inventory}</span>
               </Categories>
@@ -49,8 +51,10 @@ const Widgets = () => {
             {item.bestSellers?.map((item, sellersIndex) => (
               <BestSellers key={sellersIndex}>
                 <img src={item.image} alt="" />
-                <ProductTitle>{item.title}</ProductTitle>
-                <Price>${item.price}</Price>
+                <span>
+                  <ProductTitle>{item.title}</ProductTitle>
+                  <Price>${item.price}</Price>
+                </span>
               </BestSellers>
             ))}
           </WidgetList>

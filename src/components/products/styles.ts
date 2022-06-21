@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Button } from '../../styles/components/StyledComponents'
 
 export const Container = styled.div`
   width: 850px;
@@ -39,17 +40,12 @@ export const ProductAction = styled.div`
   transition: all 0.2s ease-in-out;
 `
 
-export const ProductButton = styled.button`
+export const ProductButton = styled(Button)`
   width: 95px;
   height: 33px;
-  color: ${props => props.theme.colors.productHoverButtonText};
   background-color: ${props => props.theme.colors.primary};
   border: 2px solid ${props => props.theme.colors.primary};
-  border-radius: 2px;
   font: 400 13px 'Raleway', sans-serif;
-  text-transform: capitalize;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
 `
 
 export const ProductImage = styled.div`

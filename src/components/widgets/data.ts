@@ -1,9 +1,9 @@
-import frontLightning from '../../public/products/front-lightning.jpg'
-import thermalFan from '../../public/products/thermal-fan.jpg'
-import coldAirSystem from '../../public/products/cold-air-system.jpg'
-import beltCarEngine from '../../public/products/belt-car-engine.jpg'
-import brakeDiscs from '../../public/products/brake-discs.jpg'
-import oilFilter from '../../public/products/oil-filter.jpg'
+import frontLightning from '../../public/widgets/front-lightning.jpg'
+import thermalFan from '../../public/widgets/thermal-fan.jpg'
+import coldAirSystem from '../../public/widgets/cold-air-system.jpg'
+import beltCarEngine from '../../public/widgets/belt-car-engine.jpg'
+import wheel from '../../public/widgets/wheel.jpg'
+import oilFilter from '../../public/widgets/oil-filter.jpg'
 
 export const widgetData = [
   {
@@ -96,8 +96,8 @@ export const widgetData = [
         price: '180.00'
       },
       {
-        image: brakeDiscs,
-        title: 'brake discs',
+        image: wheel,
+        title: 'wheels',
         price: '68.00'
       },
       {
