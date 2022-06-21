@@ -55,9 +55,9 @@ export const widgetData = [
       }
     ]
   },
-  {
-    title: 'filter by price'
-  },
+  // {
+  //    title: 'filter by price'
+  // },
   {
     title: 'brands',
     brands: [

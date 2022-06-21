@@ -4,10 +4,12 @@ import ShopOptions from '../shop-options'
 import { Container, ProductsContainer } from './styles'
 import Products from '../products'
 import Pagination from '../pagination'
+import PageTitle from '../page-title'
 
 const Shop = () => {
   return (
     <Container>
+      <PageTitle />
       <ProductsContainer>
         <ShopOptions />
         <Products />

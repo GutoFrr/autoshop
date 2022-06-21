@@ -82,6 +82,42 @@ export const SearchBar = styled.div`
   right: 0;
   opacity: 0;
   transition: all 0.3s ease;
+
+  form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input {
+    width: 192px;
+    height: 40px;
+    border: none;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font: 400 13px 'Open Sans', sans-serif;
+    color: ${props => props.theme.colors.searchText};
+
+    :focus {
+      outline: none;
+    }
+  }
+
+  span {
+    width: 39px;
+    height: 34px;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    background-color: ${props => props.theme.colors.primary};
+    cursor: pointer;
+  }
+
+  .search-icon {
+    font-size: 14px;
+    color: ${props => props.theme.colors.searchBackground};
+  }
 `
 
 export const SearchBarContainer = styled.div`
@@ -95,6 +131,7 @@ export const SearchBarContainer = styled.div`
     height: 100px;
     font-size: 15px;
     cursor: pointer;
+    transition: all 0.3s ease;
   }
 
   :hover {
@@ -103,21 +140,11 @@ export const SearchBarContainer = styled.div`
       opacity: 1;
       pointer-events: all;
     }
-  }
-`
 
-export const ShopCart = styled.div`
-  width: 370px;
-  height: 400px;
-  padding: 30px;
-  background-color: ${props => props.theme.colors.cartBackground};
-  box-shadow: 0 2px 3px rgb(39 41 48 / 5%);
-  pointer-events: none;
-  position: absolute;
-  top: 150px;
-  right: 0;
-  opacity: 0;
-  transition: all 0.3s ease;
+    .icon {
+      color: ${props => props.theme.colors.primary};
+    }
+  }
 `
 
 export const ShopCartProduct = styled.div`
@@ -204,6 +231,20 @@ export const CartControl = styled.div`
   justify-content: center;
   align-items: flex-start;
   row-gap: 5px;
+`
+
+export const ShopCart = styled.div`
+  width: 370px;
+  height: 400px;
+  padding: 30px;
+  background-color: ${props => props.theme.colors.cartBackground};
+  box-shadow: 0 2px 3px rgb(39 41 48 / 5%);
+  pointer-events: none;
+  position: absolute;
+  top: 150px;
+  right: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
 `
 
 export const ShopCartContainer = styled.div`

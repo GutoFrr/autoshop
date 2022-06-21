@@ -21,17 +21,6 @@ import navLogo from '../../public/navbar/logo.png'
 import { Icon } from '@iconify/react'
 
 const Navbar: React.FC = () => {
-  const [showShopCart, setShowShopCart] = useState(false)
-  const [showSearchBar, setShowSearchBar] = useState(false)
-
-  const handleShowShopCart = () => {
-    setShowShopCart(!showShopCart)
-  }
-
-  const handleShowSearchBar = () => {
-    setShowSearchBar(!showSearchBar)
-  }
-
   // const cartSubtotal = () => {
   //   shopCartProduct.map(item => {
   //     let productsPrice = item.price * item.quantity
@@ -54,23 +43,18 @@ const Navbar: React.FC = () => {
           ))}
           <MenuIcons>
             <SearchBarContainer>
-              <Icon
-                icon="fa:search"
-                className="icon"
-                onMouseEnter={() => setShowSearchBar(true)}
-                onMouseLeave={() => setShowSearchBar(false)}
-                onClick={handleShowSearchBar}
-              />
-              <SearchBar></SearchBar>
+              <Icon icon="fa:search" className="icon" />
+              <SearchBar>
+                <form>
+                  <input type="text" placeholder="Type Here..." />
+                  <span>
+                    <Icon icon="fa:search" className="search-icon" />
+                  </span>
+                </form>
+              </SearchBar>
             </SearchBarContainer>
             <ShopCartContainer>
-              <Icon
-                icon="fa:shopping-cart"
-                className="icon"
-                onMouseEnter={() => setShowShopCart(true)}
-                onMouseLeave={() => setShowShopCart(false)}
-                onClick={handleShowShopCart}
-              />
+              <Icon icon="fa:shopping-cart" className="icon" />
               <ShopCart>
                 {shopCartProduct.map((item, index) => (
                   <ShopCartProduct key={index}>

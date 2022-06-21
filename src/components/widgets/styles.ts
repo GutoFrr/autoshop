@@ -6,6 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  padding-left: 30px;
 `
 
 export const WidgetTitle = styled.h3`
