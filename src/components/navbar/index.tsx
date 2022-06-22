@@ -21,14 +21,16 @@ import navLogo from '../../public/navbar/logo.png'
 import { Icon } from '@iconify/react'
 
 const Navbar: React.FC = () => {
-  var productPrice = 0
-  const handleProductPrice = () => {
-    for (let i = 0; i < shopCartProduct.length; i++) {
-      productPrice = shopCartProduct[i].price * shopCartProduct[i].quantity
-      console.log(productPrice)
-    }
-    return productPrice
-  }
+  const [productPrice, setProductPrice] = useState("");
+  var productPriceCart = 0;
+  useEffect(()=>{
+    for (let i = 0; i < shopCartProduct.length; i++) {  
+      let oldValue = productPriceCart;  
+      productPriceCart = shopCartProduct[i].price * shopCartProduct[i].quantity;
+      productPriceCart = productPriceCart + oldValue;      
+    }    
+    setProductPrice(JSON.stringify(productPriceCart));
+  },[]);
 
   return (
     <Container>
@@ -74,7 +76,7 @@ const Navbar: React.FC = () => {
                 ))}
                 <CartControl>
                   <CartSubtotal>
-                    cart subtotal: <span>${() => handleProductPrice}</span>
+                    cart subtotal: <span>${productPrice}</span>
                   </CartSubtotal>
                   <ViewCartButton>view cart</ViewCartButton>
                   <CheckOutButton>check out</CheckOutButton>

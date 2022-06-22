@@ -13,7 +13,6 @@ const Home: React.FC = () => {
       <Head>
         <title>AutoShop</title>
       </Head>
-
       <Header />
       <Navbar />
       <Shop />
