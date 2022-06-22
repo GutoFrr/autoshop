@@ -14,6 +14,7 @@ import {
   SearchBarContainer,
   ShopCart,
   ShopCartContainer,
+  ShopCartFlow,
   ShopCartProduct,
   ViewCartButton
 } from './styles'
@@ -60,20 +61,22 @@ const Navbar: React.FC = () => {
             <ShopCartContainer>
               <Icon icon="fa:shopping-cart" className="icon" />
               <ShopCart>
-                {shopCartProduct.map((item, index) => (
-                  <ShopCartProduct key={index}>
-                    <img src={item.image} alt="Product Shop Cart" />
-                    <span>
-                      <h4>{item.title}</h4>
-                      <p>price: ${item.price}</p>
-                      <p>quantity: {item.quantity}</p>
-                    </span>
-                    <Icon
-                      icon="eva:close-square-fill"
-                      className="delete-icon"
-                    />
-                  </ShopCartProduct>
-                ))}
+                <ShopCartFlow>
+                  {shopCartProduct.map((item, index) => (
+                    <ShopCartProduct key={index}>
+                      <img src={item.image} alt="Product Shop Cart" />
+                      <span>
+                        <h4>{item.title}</h4>
+                        <p>price: ${item.price}</p>
+                        <p>quantity: {item.quantity}</p>
+                      </span>
+                      <Icon
+                        icon="eva:close-square-fill"
+                        className="delete-icon"
+                      />
+                    </ShopCartProduct>
+                  ))}
+                </ShopCartFlow>
                 <CartControl>
                   <CartSubtotal>
                     cart subtotal: <span>${productPrice}</span>

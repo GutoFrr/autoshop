@@ -179,7 +179,7 @@ export const ShopCartProduct = styled.div`
   .delete-icon {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 30px;
     font-size: 25px;
     color: ${props => props.theme.colors.cartProductDelete};
     cursor: pointer;
@@ -223,19 +223,45 @@ export const CartSubtotal = styled.div`
 `
 
 export const CartControl = styled.div`
+  height: 160px;
+  width: 100%;
+  padding: 30px;
+  background: ${props => props.theme.colors.cartBackground};
   position: absolute;
-  left: 30px;
-  bottom: 30px;
+  left: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   row-gap: 5px;
+  box-shadow: 0px 15px 20px 5px rgba(0, 0, 0, 0.5);
+`
+
+export const ShopCartFlow = styled.div`
+  width: 340px;
+  max-height: 215px;
+  overflow-y: scroll;
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    background-color: #f5f5f5;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #00000050;
+  }
 `
 
 export const ShopCart = styled.div`
   width: 370px;
   height: 400px;
+  overflow: hidden;
   padding: 30px;
   background-color: ${props => props.theme.colors.cartBackground};
   box-shadow: 0 2px 3px rgb(39 41 48 / 5%);

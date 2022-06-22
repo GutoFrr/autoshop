@@ -44,5 +44,17 @@ export const shopCartProduct = [
     title: 'oil filter',
     price: 30.00,
     quantity: 1
+  },
+  {
+    image: oilFilter,
+    title: 'oil filter',
+    price: 30.00,
+    quantity: 1
+  },
+  {
+    image: oilFilter,
+    title: 'oil filter',
+    price: 30.00,
+    quantity: 1
   }
 ]
