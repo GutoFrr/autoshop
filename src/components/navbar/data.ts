@@ -23,6 +23,10 @@ export const menuItems = [
     active: false
   },
   {
+    menuItem: 'Blog',
+    active: false
+  },
+  {
     menuItem: 'Contact',
     active: false
   }
