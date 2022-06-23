@@ -10,19 +10,12 @@ const Home: React.FC = () => {
       <Head>
         <title>Autoshop | Home</title>
       </Head>
-<<<<<<< HEAD
 
       <Link href="/shop">
         <a>
           This page is under production :C Click here to go to the Shop page!
         </a>
       </Link>
-=======
-      <Header />
-      <Navbar />
-      <Shop />
-      <Footer />
->>>>>>> 4ac3c575ee4385b5f4d0b31ad0c037870a11249a
     </Container>
   )
 }
