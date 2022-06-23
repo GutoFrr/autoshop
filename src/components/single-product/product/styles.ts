@@ -1,8 +1,14 @@
 import styled from 'styled-components'
 import { Button } from '../../../styles/ui/StyledComponents'
 
+interface ISlideProps {
+  slideLeft: string | number
+}
+
 export const Container = styled.div`
   width: 1170px;
+  display: flex;
+  column-gap: 30px;
 
   hr {
     border: 0;
@@ -13,15 +19,65 @@ export const Container = styled.div`
   h3 {
     font: 700 17px 'Ubuntu', sans-serif;
     color: ${props => props.theme.colors.sectionTitle};
-    line-height: 1;
     text-transform: uppercase;
-    margin-bottom: 20px;
   }
 `
 
-export const ImageContainer = styled.div``
+export const ProductImageContainer = styled.div`
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+`
 
-export const ProductSlider = styled.div``
+export const ImageContainer = styled.div<ISlideProps>`
+  width: 458px;
+  display: flex;
+  position: absolute;
+  left: ${props => props.slideLeft};
+  transition: all 0.4s ease-in-out;
+`
+
+export const ProductImage = styled.img`
+  width: 458px;
+`
+
+export const ProductSlider = styled.div`
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  border: 1px solid #e5e5e5;
+  position: absolute;
+  bottom: 0;
+`
+
+export const MiniatureProducts = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+`
+
+export const MiniatureImage = styled.img`
+  cursor: pointer;
+`
+
+export const ArrowIcon = styled.div`
+  width: 25px;
+  height: 25px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  .slider-icon {
+    font-size: 12px;
+    color: #fff;
+  }
+`
 
 export const ProductDetails = styled.div`
   display: flex;
@@ -100,6 +156,10 @@ export const Rating = styled.div`
 `
 
 export const OtherDetails = styled.div`
+  h3 {
+    margin-bottom: 20px;
+  }
+
   ul {
     list-style: none;
   }

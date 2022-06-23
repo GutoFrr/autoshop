@@ -3,14 +3,19 @@ import React, { useState } from 'react'
 import {
   ActionButtons,
   AddToCart,
+  ArrowIcon,
   CompareButton,
   Container,
   ImageContainer,
   MainDetails,
+  MiniatureImage,
+  MiniatureProducts,
   OtherDetails,
   Price,
   ProductActions,
   ProductDetails,
+  ProductImage,
+  ProductImageContainer,
   ProductQuantity,
   ProductSlider,
   Rating,
@@ -18,6 +23,11 @@ import {
   SubTitle,
   WishlistButton
 } from './styles'
+
+interface IProductSlider {
+  image: string
+  miniature: string
+}
 
 interface IProductDetails {
   title: string
@@ -42,32 +52,57 @@ interface IProductProps {
   productDetails: IProductDetails
   otherDetails: IOtherDetails
   shareProduct: IShareProduct[]
+  productSlider: IProductSlider[]
 }
 
 const Product: React.FC<IProductProps> = ({
   productDetails,
   otherDetails,
-  shareProduct
+  shareProduct,
+  productSlider
 }) => {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState<number>(0)
   const increaseCount = () => {
-    let prevCount = count
-    setCount(prevCount + 1)
+    setCount(prevCount => prevCount + 1)
   }
   const decreaseCount = () => {
-    let prevCount = count
-    setCount(prevCount - 1)
+    setCount(prevCount => prevCount - 1)
     if (count < 1) {
       setCount(0)
     }
   }
 
+  const [productCarousel, setProductCarousel] = useState<number>(0)
+  const handleProductCarousel = (direction: 'foward' | 'backward') => {
+    if (direction === 'foward') {
+      setProductCarousel(productCarousel > -3 ? productCarousel - 1 : 0)
+    } else if (direction === 'backward') {
+      setProductCarousel(productCarousel < -0 ? productCarousel + 1 : -3)
+    }
+  }
+
   return (
     <Container>
-      <ImageContainer>
-        <img src="" alt="" />
-        <ProductSlider></ProductSlider>
-      </ImageContainer>
+      <ProductImageContainer>
+        <ImageContainer slideLeft={(productCarousel * 458).toString() + 'px'}>
+          {productSlider.map((item, index) => (
+            <ProductImage src={item.image} alt="Product Image" key={index} />
+          ))}
+        </ImageContainer>
+        <ProductSlider>
+          <ArrowIcon onClick={() => handleProductCarousel('backward')}>
+            <Icon icon="fa:angle-left" className="slider-icon" />
+          </ArrowIcon>
+          <MiniatureProducts>
+            {productSlider.map((item, index) => (
+              <MiniatureImage src={item.miniature} alt="Miniature Image" key={index} />
+            ))}
+          </MiniatureProducts>
+          <ArrowIcon onClick={() => handleProductCarousel('foward')}>
+            <Icon icon="fa:angle-right" className="slider-icon" />
+          </ArrowIcon>
+        </ProductSlider>
+      </ProductImageContainer>
       <ProductDetails>
         <MainDetails>
           <h2>{productDetails.title}</h2>
