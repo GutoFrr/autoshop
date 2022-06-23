@@ -22,6 +22,7 @@ import navLogo from '../../public/navbar/logo.png'
 import { Icon } from '@iconify/react'
 
 const Navbar: React.FC = () => {
+<<<<<<< HEAD
   const [productPrice, setProductPrice] = useState(String)
   var productPriceCart = 0
   useEffect(() => {
@@ -32,6 +33,18 @@ const Navbar: React.FC = () => {
     }
     setProductPrice(JSON.stringify(productPriceCart))
   }, [])
+=======
+  const [productPrice, setProductPrice] = useState("");
+  var productPriceCart = 0;
+  useEffect(()=>{
+    for (let i = 0; i < shopCartProduct.length; i++) {  
+      let oldValue = productPriceCart;  
+      productPriceCart = shopCartProduct[i].price * shopCartProduct[i].quantity;
+      productPriceCart = productPriceCart + oldValue;      
+    }    
+    setProductPrice(JSON.stringify(productPriceCart));
+  },[]);
+>>>>>>> 4ac3c575ee4385b5f4d0b31ad0c037870a11249a
 
   return (
     <Container>
