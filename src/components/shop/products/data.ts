@@ -1,9 +1,9 @@
-import brakeDiscs from '../../public/products/brake-discs.jpg'
-import oilFilter from '../../public/products/oil-filter.jpg'
-import beltCarEngine from '../../public/products/belt-car-engine.jpg'
-import frontLightning from '../../public/products/front-lightning.jpg'
-import thermalFan from '../../public/products/thermal-fan.jpg'
-import coldAirSystem from '../../public/products/cold-air-system.jpg'
+import brakeDiscs from '../../../public/products/brake-discs.jpg'
+import oilFilter from '../../../public/products/oil-filter.jpg'
+import beltCarEngine from '../../../public/products/belt-car-engine.jpg'
+import frontLightning from '../../../public/products/front-lightning.jpg'
+import thermalFan from '../../../public/products/thermal-fan.jpg'
+import coldAirSystem from '../../../public/products/cold-air-system.jpg'
 
 export const productData = [
   {

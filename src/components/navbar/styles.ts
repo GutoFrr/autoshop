@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Button } from '../../styles/components/StyledComponents'
+import { Button } from '../../styles/ui/StyledComponents'
 
 export const Container = styled.div`
   height: 100px;

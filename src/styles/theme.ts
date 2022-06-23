@@ -63,12 +63,14 @@ const theme = {
     footerCopyrightLink: '#acacac',
     footerCompanies: '#666',
     footerCompaniesIconHover: '#fff',
+    discount: '#6c6c6c',
     facebook: '#3B5998',
     googlePlus: '#DD4B39',
     twitter: '#00ACEE',
     pinterest: '#C8232C',
     vimeo: '#86C9EF',
-    wifi: '#EE802F'
+    wifi: '#EE802F',
+    dribbble: '#EA4C89'
   }
 }
 

@@ -2,22 +2,20 @@ import React from 'react'
 import Head from 'next/head'
 
 import { Container } from '../styles/pages/Home'
-import Header from '../components/header'
-import Navbar from '../components/navbar'
-import Shop from '../components/shop'
-import Footer from '../components/footer'
+import Link from 'next/link'
 
 const Home: React.FC = () => {
   return (
     <Container>
       <Head>
-        <title>AutoShop</title>
+        <title>Autoshop | Home</title>
       </Head>
 
-      <Header />
-      <Navbar />
-      <Shop />
-      <Footer />
+      <Link href="/shop">
+        <a>
+          This page is under production :C Click here to go to the Shop page!
+        </a>
+      </Link>
     </Container>
   )
 }
