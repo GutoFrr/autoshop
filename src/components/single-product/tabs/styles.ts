@@ -1,17 +1,58 @@
 import styled from 'styled-components'
 
-export const Container = styled.div``
+interface ITabContentProps {
+  display: string | number
+}
 
-export const ProductTabs = styled.div``
+export const Container = styled.div`
+  width: 1170px;
+`
 
-export const NavTabs = styled.ul``
+export const ProductTabs = styled.div`
+  border: 1px solid #ddd;
+`
 
-export const TabContent = styled.div``
+export const NavTabs = styled.ul`
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #ddd;
+  list-style: none;
 
-export const TabDescription = styled.div``
+  li {
+    font: 700 14px 'Ubuntu', sans-serif;
+    color: #000;
+    text-transform: capitalize;
+    padding-inline: 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 
-export const TabDetails = styled.table``
+    :nth-child(2) {
+      border-left: 1px solid #e5e5e5;
+      border-right: 1px solid #e5e5e5;
+    }
 
-export const TabReviews = styled.div``
+    :hover {
+      color: ${props => props.theme.colors.primary};
+    }
+  }
+`
+
+export const TabContent = styled.div`
+  padding: 20px;
+`
+
+export const TabDescription = styled.div<ITabContentProps>``
+
+export const TabDetails = styled.table<ITabContentProps>`
+  display: ${props => (props.display ? 'block' : 'none')};
+`
+
+export const TabReviews = styled.div<ITabContentProps>`
+  display: ${props => (props.display ? 'block' : 'none')};
+`
 
 export const ReviewCustomer = styled.div``

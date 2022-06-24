@@ -2,11 +2,12 @@ export const tabsData = [
   {
     title: 'description',
     description:
-      'Lorem ipsum dolor sit amet, mauris suspendisse viverra eleifend tortor tellus suscipit, tortor aliquet at nulla mus, dignissim neque, nulla neque. Ultrices proin mi urna nibh ut, aenean sollicitudin etiam libero nisl, ultrices ridiculus in magna purus consequuntur, ipsum donec orci ad vitae pede, id odio.'
+      'Lorem ipsum dolor sit amet, mauris suspendisse viverra eleifend tortor tellus suscipit, tortor aliquet at nulla mus, dignissim neque, nulla neque. Ultrices proin mi urna nibh ut, aenean sollicitudin etiam libero nisl, ultrices ridiculus in magna purus consequuntur, ipsum donec orci ad vitae pede, id odio.',
+    active: false
   },
   {
     title: 'details',
-    subTitle: 'technical details',
+    subtitle: 'technical details',
     table: [
       {
         title: 'part number',
@@ -36,7 +37,8 @@ export const tabsData = [
         title: 'batteries required?',
         description: 'no'
       }
-    ]
+    ],
+    active: false
   },
   {
     title: 'reviews',
@@ -55,6 +57,7 @@ export const tabsData = [
         review:
           'Lorem ipsum dolor sit amet, mauris suspendisse viverra eleifend tortor tellus suscipit, tortor aliquet at nulla mus, dignissim neque, nulla neque. Ultrices proin mi urna nibh ut, aenean sollicitudin etiam libero nisl, ultrices ridiculus in magna purus consequuntur, ipsum donec orci ad vitae pede, id odio.'
       }
-    ]
+    ],
+    active: false
   }
 ]

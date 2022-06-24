@@ -9,6 +9,7 @@ export const Container = styled.div`
   width: 1170px;
   display: flex;
   column-gap: 30px;
+  margin-bottom: 70px;
 
   hr {
     border: 0;
