@@ -36,21 +36,21 @@ const Tabs: React.FC = () => {
         </NavTabs>
         {tabsData.map((item, index) => (
           <TabContent key={index}>
-            <TabDescription>
+            <TabDescription propDisplay={display}>
               {item.description}
             </TabDescription>
-            <TabDetails>
+            <TabDetails propDisplay={display}>
               <h3>{item.subtitle}</h3>
-              {item.table?.map((item, tableIndex) => (
-                <tr key={tableIndex}>
+              {item.table?.map((item, index) => (
+                <tr key={index}>
                   <td>{item.title}</td>
                   <td>{item.description}</td>
                 </tr>
               ))}
             </TabDetails>
-            <TabReviews>
-              {item.reviews?.map((item, reviewIndex) => (
-                <ReviewCustomer key={reviewIndex}>
+            <TabReviews propDisplay={display}>
+              {item.reviews?.map((item, index) => (
+                <ReviewCustomer key={index}>
                   <h5>{item.customer}</h5>
                   <h6>{item.date}</h6>
                   <p>{item.review}</p>

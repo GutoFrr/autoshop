@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 interface ITabContentProps {
-  display: string | number
+  propDisplay: any
 }
 
 export const Container = styled.div`
@@ -42,17 +42,20 @@ export const NavTabs = styled.ul`
 `
 
 export const TabContent = styled.div`
+  position: relative;
   padding: 20px;
 `
 
-export const TabDescription = styled.div<ITabContentProps>``
+export const TabDescription = styled.div<ITabContentProps>`
+  display: ${props => (props.propDisplay ? 'block' : 'none')};
+`
 
-export const TabDetails = styled.table<ITabContentProps>`
-  display: ${props => (props.display ? 'block' : 'none')};
+export const TabDetails = styled.div<ITabContentProps>`
+  display: ${props => (props.propDisplay ? 'block' : 'none')};
 `
 
 export const TabReviews = styled.div<ITabContentProps>`
-  display: ${props => (props.display ? 'block' : 'none')};
+  display: ${props => (props.propDisplay ? 'block' : 'none')};
 `
 
 export const ReviewCustomer = styled.div``
