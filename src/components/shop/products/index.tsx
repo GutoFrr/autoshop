@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import { productData } from './data'
 import {
@@ -23,7 +24,9 @@ const Products = () => {
             <ProductHover>
               <ProductAction>
                 <ProductButton>add to cart</ProductButton>
-                <ProductButton>item details</ProductButton>
+                <Link href="/single-product">
+                  <ProductButton>item details</ProductButton>
+                </Link>
               </ProductAction>
             </ProductHover>
           </ProductImage>

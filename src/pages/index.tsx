@@ -16,6 +16,11 @@ const Home: React.FC = () => {
           This page is under production :C Click here to go to the Shop page!
         </a>
       </Link>
+      <Link href="/single-product">
+        <a>
+          Or check how is single product page going!
+        </a>
+      </Link>
     </Container>
   )
 }
