@@ -6,6 +6,7 @@ interface ITabContentProps {
 
 export const Container = styled.div`
   width: 1170px;
+  margin-bottom: 100px;
 `
 
 export const ProductTabs = styled.div`

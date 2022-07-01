@@ -1,11 +1,13 @@
 export const tabsData = [
   {
+    id: 1,
     title: 'description',
     description:
       'Lorem ipsum dolor sit amet, mauris suspendisse viverra eleifend tortor tellus suscipit, tortor aliquet at nulla mus, dignissim neque, nulla neque. Ultrices proin mi urna nibh ut, aenean sollicitudin etiam libero nisl, ultrices ridiculus in magna purus consequuntur, ipsum donec orci ad vitae pede, id odio.',
     active: false
   },
   {
+    id: 2,
     title: 'details',
     subtitle: 'technical details',
     table: [
@@ -41,6 +43,7 @@ export const tabsData = [
     active: false
   },
   {
+    id: 3,
     title: 'reviews',
     reviews: [
       {

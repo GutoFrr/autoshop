@@ -10,6 +10,7 @@ import {
 } from '../../components/single-product/product/data'
 import Tabs from '../../components/single-product/tabs'
 import { Container } from '../../styles/pages/SingleProduct'
+import RelatedProducts from '../../components/single-product/related-products'
 
 const SingleProduct = () => {
   return (
@@ -26,6 +27,7 @@ const SingleProduct = () => {
         productSlider={productSlider}
       />
       <Tabs />
+      <RelatedProducts />
     </Container>
   )
 }
